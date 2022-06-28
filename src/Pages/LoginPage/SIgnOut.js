@@ -4,6 +4,7 @@ import auth from '../../firebase.init';
 import SocialLogin from '../SocialLogin/SocialLogin';
 import { Link } from "react-router-dom";
 import './SignOut.css'
+import Loading from '../Loading/Loading';
 
 const SIgnOut = () => {
     const [email, setEmail] = useState('')
@@ -16,7 +17,7 @@ const SIgnOut = () => {
     ] = useSignInWithEmailAndPassword(auth);
 
     if (loading) {
-        // return <Loading></Loading>
+        return <Loading></Loading>
     }
 
     

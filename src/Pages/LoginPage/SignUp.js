@@ -4,6 +4,7 @@ import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-fireb
 import SocialLogin from '../SocialLogin/SocialLogin';
 import auth from '../../firebase.init';
 import './SignUp.css'
+import Loading from '../Loading/Loading';
 
 const SignUp = () => {
     const [agree, setAgree] = useState(false);
@@ -22,7 +23,7 @@ const SignUp = () => {
     }
 
     if (loading || updating) {
-        // return <Loading></Loading>
+        return <Loading></Loading>
     }
 
     if (user) {
