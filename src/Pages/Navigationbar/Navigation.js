@@ -27,7 +27,7 @@ const Navigation = () => {
                                 user && <Link to="/dashboard" className='mx-2 button_Clr'>DashBoard</Link>
                             }
                             {
-                                user ? <button className='btn btn-danger' onClick={logout} >Sign Out</button> : <Link className='btn btn-success button_Clr' to="/login">Login</Link>
+                                user ? <button className='btn btn-outline-secondary' onClick={logout} >Sign Out</button> : <Link className='btn btn-outline-secondary' to="/login">Login</Link>
                             }
                         </Navbar.Text>
                     </Navbar.Collapse>

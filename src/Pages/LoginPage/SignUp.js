@@ -52,11 +52,11 @@ const SignUp = () => {
                 <input type="password" name="password" id="" placeholder='Password' required />
                 <input onClick={() => setAgree(!agree)} type="checkbox" name="terms" id="terms" />
                 <label className={`ps-2 ${agree ? '' : 'text-danger'}`} htmlFor="terms">Accept Terms and Conditions</label>
-                <input disabled={!agree} className='w-50 mx-auto btn btn-success mt-2'
+                <input disabled={!agree} className='w-50 mx-auto btn btn-outline-secondary mt-2'
                     type="submit"
                     value="Sign Up" />
             </form>
-            <p>Already have an account? <Link to="/login" className='text-info pe-auto text-decoration-none' onClick={navigateLogin}>Please Login</Link> </p>
+            <p>Already have an account? <Link to="/login" className='text-success pe-auto text-decoration-none' onClick={navigateLogin}>Please Login</Link> </p>
             <SocialLogin></SocialLogin>
         </div>
     );
